@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Keuangan</title>
+</head>
+
+<body>
+    <h1>Aplikasi Manajemen Keuangan</h1>
+    <label for="bulanan">Pengeluaran Bulanan:</label>
+    <input type="number" id="bulanan">
+    <br>
+    <label for="tahunan">Pengeluaran Tahunan:</label>
+    <input type="number" id="tahunan">
+    <br>
+    <button onclick="hitungKeuangan()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungTotalPengeluaran(pengeluaranBulanan, pengeluaranTahunan) {
+            return pengeluaranBulanan * 12 + pengeluaranTahunan;
+        }
+
+        function bandingkanPengeluaran(pengeluaranBulanan, pengeluaranTahunan) {
+            if (pengeluaranBulanan * 12 > pengeluaranTahunan) {
+                return "Pengeluaran bulanan lebih besar dari pengeluaran tahunan.";
+            } else if (pengeluaranBulanan * 12 < pengeluaranTahunan) {
+                return "Pengeluaran tahunan lebih besar dari pengeluaran bulanan.";
+            } else {
+                return "Pengeluaran bulanan dan tahunan seimbang.";
+            }
+        }
+
+        function hitungRataRataPengeluaran(pengeluaranTahunan) {
+            return pengeluaranTahunan / 12;
+        }
+
+        function hitungKeuangan() {
+            const pengeluaranBulanan = parseFloat(document.getElementById('bulanan').value);
+            const pengeluaranTahunan = parseFloat(document.getElementById('tahunan').value);
+
+            const total = hitungTotalPengeluaran(pengeluaranBulanan, pengeluaranTahunan);
+            const perbandingan = bandingkanPengeluaran(pengeluaranBulanan, pengeluaranTahunan);
+            const rataRata = hitungRataRataPengeluaran(pengeluaranTahunan);
+
+            document.getElementById('hasil').innerHTML = `
+                    <p>Total Pengeluaran: ${total}</p>
+                    <p>${perbandingan}</p>
+                    <p>Rata-rata Pengeluaran Bulanan: ${rataRata}</p>
+                `;
+        }
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>
