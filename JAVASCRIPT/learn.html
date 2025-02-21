@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Belajar Variabel dalam Javascript</title>
+
+</head>
+
+<body>
+
+    <!-- Tipe Data Var dan Let -->
+    <script>
+        var name = "ojanndev";
+        var blog = "Tips mudah belajar JavaScript";
+        var date = "19-02-2025";
+        var isavtive = true;
+        var url = "https://ojannblog.blogspot.com/";
+
+        function sayHello() {
+            alert("Hello!");
+        }
+
+        document.write("Nama Situs : " + name + "<br>");
+        document.write("Nama Blogger : " + blog + "<br>");
+        document.write("Tanggal Rilis : " + date + "<br>");
+        document.write("Validasi : " + isavtive + "<br>");
+        document.write("Alamat : " + url + "<br>");
+    </script>
+
+    <hr>
+
+
+    <!-- Operator Aritmarika Penjumlahan -->
+    <script>
+        document.write("<h2>Pembahasan Tentang Operator</h2>");
+        document.write("<h3>1. Operator Aritmatika pada Javascript</h3>");
+
+        var a = 5;
+        var b = 10;
+
+        var c = a * b;
+        console.log(c);
+        var a = 15;
+        var b = 4;
+        var c = 0;
+
+        // pengurangan
+        c = a - b;
+        document.write("Pengurang : " + `${a} - ${b} = ${c}<br/>`);
+        // Perkalian
+        c = a * b;
+        document.write("Perkalian : " + `${a} * ${b} = ${c}<br/>`);
+
+        // pemangkatan
+        c = a ** b;
+        document.write("Pemangkatan : " + `${a} ** ${b} = ${c}<br/>`);
+
+        // Pembagian
+        c = a / b;
+        document.write("Pembagian : " + `${a} / ${b} = ${c}<br/>`);
+
+        // Modulo
+        c = a % b;
+        document.write("Modulo/Sisa Bagi : " + `${a} % ${b} = ${c}<br/>`);
+    </script>
+    <hr>
+
+    <script>
+        document.write("<h3>2.Operator Penugasan pada Javascript</h3>");
+
+        document.write("Mula-mula nilai score...<br>");
+        // pengisian nilai
+        var score = 100;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan menjumlahan dengan 5
+        score += 5;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan pengurangan dengan 2
+        score -= 2;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan perkalian dengan 2
+        score *= 2;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan pembagian dengan 4
+        score /= 4;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan pemangkatan dengan 2
+        score **= 2;
+        document.write("score = " + score + "<br/>");
+
+        // pengisian dan modulo dengan 3;
+        score %= 3;
+        document.write("score = " + score + "<br/>");
+    </script>
+
+    <script>
+        document.write("<h3>3. Operator Perbandingan pada Javascript</h3>");
+
+        var aku = 20;
+        var kamu = 19;
+
+        // sama dengan
+        var hasil = aku == kamu;
+        document.write(`${aku} == ${kamu} = ${hasil}<br/>`);
+
+        // lebih besar
+        var hasil = aku > kamu;
+        document.write(`${aku} > ${kamu} = ${hasil}<br/>`);
+
+        // lebih besar sama dengan
+        var hasil = aku >= kamu;
+        document.write(`${aku} >= ${kamu} = ${hasil}<br/>`);
+
+        // lebih kecil
+        var hasil = aku < kamu;
+        document.write(`${aku} < ${kamu} = ${hasil}<br/>`);
+
+        // lebih kecil sama dengan
+        var hasil = aku <= kamu;
+        document.write(`${aku} <= ${kamu} = ${hasil}<br/>`);
+
+        // tidak sama dengan
+        var hasil = aku != kamu;
+        document.write(`${aku} != ${kamu} = ${hasil}<br/>`);
+    </script>
+
+    <br><br>
+    <button onclick="sayHello()">Klik Aku!</button>
+
+</body>
+
+</html>

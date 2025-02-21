@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-5 JavaScript</title>
+</head>
+
+<body>
+    <h2>1. Dialog Alert</h2>
+    <button onClick="alert('Tombol diklik!')">Klik Saya</button>
+    <hr>
+    <h2>2.Dialog Confirm</h2>
+    <script>
+        var yakin = confirm("Apakah kamu yakin akan ingin follow, tekan tombol ok!");
+
+        if (yakin) {
+            window.location = "https://www.petanikode.com";
+        } else {
+            document.write("Baiklah, tetap di sini saja ya :)");
+        }
+    </script>
+    <hr>
+    <h2>3.Dialog Prompt</h2>
+    <script>
+        var nama = prompt("Siapa nama kamu?", "");
+        document.write("<p>Hello " + nama + "</p>");
+    </script>
+</body>
+
+</html>
